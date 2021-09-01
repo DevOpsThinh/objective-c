@@ -1,0 +1,200 @@
+diff --git a/RandomNumber/RandomNumber.xcodeproj/project.pbxproj b/RandomNumber/RandomNumber.xcodeproj/project.pbxproj
+index b4e78e0..e210209 100644
+--- a/RandomNumber/RandomNumber.xcodeproj/project.pbxproj
++++ b/RandomNumber/RandomNumber.xcodeproj/project.pbxproj
+@@ -61,12 +61,13 @@
+ 		4DEE9AAB26DEB3D1003DC4CA /* RandomNumber */ = {
+ 			isa = PBXGroup;
+ 			children = (
+-				4DEE9AAC26DEB3D1003DC4CA /* AppDelegate.h */,
++				4DEE9AC626DEB429003DC4CA /* Controllers */,
++				4DEE9AC826DEB44A003DC4CA /* Views */,
++				4DEE9AC726DEB43F003DC4CA /* Models */,
+ 				4DEE9AAD26DEB3D1003DC4CA /* AppDelegate.m */,
++				4DEE9AAC26DEB3D1003DC4CA /* AppDelegate.h */,
+ 				4DEE9AAF26DEB3D1003DC4CA /* SceneDelegate.h */,
+ 				4DEE9AB026DEB3D1003DC4CA /* SceneDelegate.m */,
+-				4DEE9AB226DEB3D1003DC4CA /* ViewController.h */,
+-				4DEE9AB326DEB3D1003DC4CA /* ViewController.m */,
+ 				4DEE9AB526DEB3D1003DC4CA /* Main.storyboard */,
+ 				4DEE9AB826DEB3D2003DC4CA /* Assets.xcassets */,
+ 				4DEE9ABA26DEB3D2003DC4CA /* LaunchScreen.storyboard */,
+@@ -76,6 +77,29 @@
+ 			path = RandomNumber;
+ 			sourceTree = "<group>";
+ 		};
++		4DEE9AC626DEB429003DC4CA /* Controllers */ = {
++			isa = PBXGroup;
++			children = (
++				4DEE9AB226DEB3D1003DC4CA /* ViewController.h */,
++				4DEE9AB326DEB3D1003DC4CA /* ViewController.m */,
++			);
++			path = Controllers;
++			sourceTree = "<group>";
++		};
++		4DEE9AC726DEB43F003DC4CA /* Models */ = {
++			isa = PBXGroup;
++			children = (
++			);
++			path = Models;
++			sourceTree = "<group>";
++		};
++		4DEE9AC826DEB44A003DC4CA /* Views */ = {
++			isa = PBXGroup;
++			children = (
++			);
++			path = Views;
++			sourceTree = "<group>";
++		};
+ /* End PBXGroup section */
+ 
+ /* Begin PBXNativeTarget section */
+diff --git a/RandomNumber/RandomNumber.xcodeproj/project.xcworkspace/xcuserdata/devopsthinh.xcuserdatad/UserInterfaceState.xcuserstate b/RandomNumber/RandomNumber.xcodeproj/project.xcworkspace/xcuserdata/devopsthinh.xcuserdatad/UserInterfaceState.xcuserstate
+index 2a9e32d..1c9bd4b 100644
+Binary files a/RandomNumber/RandomNumber.xcodeproj/project.xcworkspace/xcuserdata/devopsthinh.xcuserdatad/UserInterfaceState.xcuserstate and b/RandomNumber/RandomNumber.xcodeproj/project.xcworkspace/xcuserdata/devopsthinh.xcuserdatad/UserInterfaceState.xcuserstate differ
+diff --git a/RandomNumber/RandomNumber/Base.lproj/Main.storyboard b/RandomNumber/RandomNumber/Base.lproj/Main.storyboard
+index 808a21c..f505ba2 100644
+--- a/RandomNumber/RandomNumber/Base.lproj/Main.storyboard
++++ b/RandomNumber/RandomNumber/Base.lproj/Main.storyboard
+@@ -1,24 +1,85 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
++<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
++    <device id="retina6_5" orientation="portrait" appearance="light"/>
+     <dependencies>
+-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
++        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
++        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+     </dependencies>
+     <scenes>
+         <!--View Controller-->
+         <scene sceneID="tne-QT-ifu">
+             <objects>
+-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
++                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
++                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
++                        <subviews>
++                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="Pmy-he-Dnd">
++                                <rect key="frame" x="8" y="52" width="398" height="148"/>
++                                <subviews>
++                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwU-3M-tTB">
++                                        <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
++                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
++                                        <constraints>
++                                            <constraint firstAttribute="width" constant="398" id="QL6-xy-vvF"/>
++                                            <constraint firstAttribute="height" constant="50" id="ehH-d6-2YN"/>
++                                        </constraints>
++                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
++                                        <nil key="textColor"/>
++                                        <nil key="highlightedColor"/>
++                                        <color key="shadowColor" red="0.0" green="0.41369818650000001" blue="0.34768417460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
++                                        <size key="shadowOffset" width="0.69999999999999996" height="0.5"/>
++                                    </label>
++                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve7-En-ore">
++                                        <rect key="frame" x="0.0" y="98" width="398" height="50"/>
++                                        <color key="backgroundColor" systemColor="systemTealColor"/>
++                                        <constraints>
++                                            <constraint firstAttribute="width" constant="398" id="LRH-yH-PGE"/>
++                                            <constraint firstAttribute="height" constant="50" id="rZD-UK-oix"/>
++                                        </constraints>
++                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
++                                        <state key="normal" title="Generate Random Number">
++                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
++                                        </state>
++                                        <connections>
++                                            <action selector="btnGenerate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSQ-xV-2up"/>
++                                        </connections>
++                                    </button>
++                                </subviews>
++                                <constraints>
++                                    <constraint firstItem="SwU-3M-tTB" firstAttribute="top" secondItem="Pmy-he-Dnd" secondAttribute="top" id="aL5-HZ-b27"/>
++                                    <constraint firstItem="Ve7-En-ore" firstAttribute="top" secondItem="SwU-3M-tTB" secondAttribute="bottom" constant="30" id="zfA-IZ-5ev"/>
++                                </constraints>
++                            </stackView>
++                        </subviews>
+                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
++                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
++                        <constraints>
++                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pmy-he-Dnd" secondAttribute="trailing" constant="8" id="B7p-wQ-GVF"/>
++                            <constraint firstItem="Pmy-he-Dnd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="IU9-Ep-kEE"/>
++                            <constraint firstItem="Pmy-he-Dnd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="klX-4b-Tbi"/>
++                        </constraints>
+                     </view>
++                    <connections>
++                        <outlet property="lblNumber" destination="SwU-3M-tTB" id="Stc-3A-Knd"/>
++                    </connections>
+                 </viewController>
+                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+             </objects>
++            <point key="canvasLocation" x="-439.13043478260875" y="24.776785714285712"/>
+         </scene>
+     </scenes>
++    <resources>
++        <systemColor name="systemBackgroundColor">
++            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
++        </systemColor>
++        <systemColor name="systemGray5Color">
++            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
++        </systemColor>
++        <systemColor name="systemTealColor">
++            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
++        </systemColor>
++    </resources>
+ </document>
+diff --git a/RandomNumber/RandomNumber/Controllers/ViewController.h b/RandomNumber/RandomNumber/Controllers/ViewController.h
+index 744405b..a90d81c 100644
+--- a/RandomNumber/RandomNumber/Controllers/ViewController.h
++++ b/RandomNumber/RandomNumber/Controllers/ViewController.h
+@@ -8,7 +8,8 @@
+ #import <UIKit/UIKit.h>
+ 
+ @interface ViewController : UIViewController
+-
++@property (weak, nonatomic) IBOutlet UILabel *lblNumber;
++- (IBAction)btnGenerate:(UIButton *)sender;
+ 
+ @end
+ 
+diff --git a/RandomNumber/RandomNumber/Controllers/ViewController.m b/RandomNumber/RandomNumber/Controllers/ViewController.m
+index 60d924d..9579e29 100644
+--- a/RandomNumber/RandomNumber/Controllers/ViewController.m
++++ b/RandomNumber/RandomNumber/Controllers/ViewController.m
+@@ -7,10 +7,6 @@
+ 
+ #import "ViewController.h"
+ 
+-@interface ViewController ()
+-
+-@end
+-
+ @implementation ViewController
+ 
+ - (void)viewDidLoad {
+@@ -19,4 +15,8 @@ - (void)viewDidLoad {
+ }
+ 
+ 
++- (IBAction)btnGenerate:(UIButton *)sender {
++    int randomNumber = (arc4random() % 100) + 1;
++    self.lblNumber.text = [NSString stringWithFormat: @"%i", randomNumber];
++}
+ @end
+diff --git a/RandomNumber/RandomNumber/Info.plist b/RandomNumber/RandomNumber/Info.plist
+index 72bf2c4..6af449a 100644
+--- a/RandomNumber/RandomNumber/Info.plist
++++ b/RandomNumber/RandomNumber/Info.plist
+@@ -4,6 +4,8 @@
+ <dict>
+ 	<key>CFBundleDevelopmentRegion</key>
+ 	<string>$(DEVELOPMENT_LANGUAGE)</string>
++	<key>CFBundleDisplayName</key>
++	<string>RandomNumber</string>
+ 	<key>CFBundleExecutable</key>
+ 	<string>$(EXECUTABLE_NAME)</string>
+ 	<key>CFBundleIdentifier</key>
