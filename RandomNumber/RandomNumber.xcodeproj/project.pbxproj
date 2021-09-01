@@ -61,12 +61,13 @@
 		4DEE9AAB26DEB3D1003DC4CA /* RandomNumber */ = {
 			isa = PBXGroup;
 			children = (
-				4DEE9AAC26DEB3D1003DC4CA /* AppDelegate.h */,
+				4DEE9AC626DEB429003DC4CA /* Controllers */,
+				4DEE9AC826DEB44A003DC4CA /* Views */,
+				4DEE9AC726DEB43F003DC4CA /* Models */,
 				4DEE9AAD26DEB3D1003DC4CA /* AppDelegate.m */,
+				4DEE9AAC26DEB3D1003DC4CA /* AppDelegate.h */,
 				4DEE9AAF26DEB3D1003DC4CA /* SceneDelegate.h */,
 				4DEE9AB026DEB3D1003DC4CA /* SceneDelegate.m */,
-				4DEE9AB226DEB3D1003DC4CA /* ViewController.h */,
-				4DEE9AB326DEB3D1003DC4CA /* ViewController.m */,
 				4DEE9AB526DEB3D1003DC4CA /* Main.storyboard */,
 				4DEE9AB826DEB3D2003DC4CA /* Assets.xcassets */,
 				4DEE9ABA26DEB3D2003DC4CA /* LaunchScreen.storyboard */,
@@ -74,6 +75,29 @@
 				4DEE9ABE26DEB3D2003DC4CA /* main.m */,
 			);
 			path = RandomNumber;
+			sourceTree = "<group>";
+		};
+		4DEE9AC626DEB429003DC4CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DEE9AB226DEB3D1003DC4CA /* ViewController.h */,
+				4DEE9AB326DEB3D1003DC4CA /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4DEE9AC726DEB43F003DC4CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4DEE9AC826DEB44A003DC4CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

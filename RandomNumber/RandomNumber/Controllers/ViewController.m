@@ -7,10 +7,6 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -19,4 +15,8 @@
 }
 
 
+- (IBAction)btnGenerate:(UIButton *)sender {
+    int randomNumber = (arc4random() % 100) + 1;
+    self.lblNumber.text = [NSString stringWithFormat: @"%i", randomNumber];
+}
 @end
